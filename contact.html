@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Angels Kindergarten | Contact Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="LAK2logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .contact-form-wrap {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: var(--shadow-soft);
+            border: 2px dashed var(--lavender);
+        }
+
+        .contact-input, .contact-textarea {
+            width: 100%;
+            padding: 16px 24px;
+            border-radius: 20px;
+            border: 2px dashed var(--lavender);
+            background: var(--primary-bg);
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1rem;
+            color: var(--text-dark);
+            outline: none;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .contact-textarea {
+            border-radius: 20px;
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-input:focus, .contact-textarea:focus {
+            border-color: var(--coral);
+            border-style: solid;
+            box-shadow: 0 0 0 4px rgba(255, 139, 139, 0.1);
+        }
+
+        .contact-info-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-card {
+            background: var(--buttercream);
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px dashed var(--green-organic);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .info-card .icon {
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .info-card h4 {
+            margin-bottom: 8px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         NAVBAR
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="LAK2logo.png" alt="Little Angels Icon" class="leaf-icon">
+                <img src="LAKlogo.png" alt="Little Angels Kindergarten" class="brand-logo">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="contact.html" class="nav-cta">Visit Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO
+         ============================================ -->
+    <section class="hero" style="padding-bottom: 60px;">
+        <div class="container" style="display: block; text-align: center;">
+            <div class="hero-text reveal reveal-delay-1" style="max-width: 800px; margin: 0 auto; position: relative;">
+                <!-- Subtle PNG Doodles -->
+                <img src="doodles/12_20260517_151332_0011.png" alt="Doodle Leaf" class="scrapbook-doodle doodle-hero-1" loading="lazy">
+                <img src="doodles/17_20260517_151332_0016.png" alt="Doodle Flower" class="scrapbook-doodle doodle-hero-2" loading="lazy">
+                <span class="section-label" style="font-family: 'Kalam', cursive; font-size: 1.4rem; color: var(--green-organic); margin-bottom: 8px;">Let's Talk</span>
+                <h1 style="margin-bottom: 24px;">
+                    Visit Our
+                    <span class="keyword highlight">
+                        Kindergarten
+                        <svg class="scribble" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M 0 5 Q 25 -5, 50 5 T 100 5"/>
+                        </svg>
+                    </span>
+                </h1>
+                <p style="margin-inline: auto;">Have questions about our programs or want to schedule a tour? We'd love to hear from you. Send us a message or give us a call!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section class="contact-section" style="padding-bottom: 100px;">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrap reveal" style="position: relative;">
+                    <img src="doodles/3_20260517_151332_0002.png" alt="Doodle Flower" class="scrapbook-doodle doodle-card-corner" loading="lazy">
+                    <h3 style="margin-bottom: 24px;">Send us a message</h3>
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.');">
+                        <input type="text" class="contact-input" placeholder="Your Name" required>
+                        <input type="email" class="contact-input" placeholder="Your Email" required>
+                        <input type="tel" class="contact-input" placeholder="Phone Number">
+                        <textarea class="contact-textarea" placeholder="How can we help you?" required></textarea>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrap reveal reveal-delay-1">
+                    <div class="info-card">
+                        <img src="doodles/1_20260517_151332_0000.png" alt="Doodle Branch" class="scrapbook-doodle doodle-card-left" style="bottom: -10px; left: -10px;" loading="lazy">
+                        <div class="icon">📍</div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p style="margin:0; font-size: 0.95rem;">Laxmi Nagar, Opp. Water Tank<br>Nagpur - 440 022</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card" style="background: var(--sky-mist); border-color: var(--sky-mist);">
+                        <div class="icon">📞</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p style="margin:0; font-size: 0.95rem;">
+                                <a href="tel:+918275500910" style="color: var(--text-dark); text-decoration: none;">+91 82755 00910</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-card" style="background: var(--pink-mist); border-color: var(--pink-mist);">
+                        <div class="icon">✉️</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p style="margin:0; font-size: 0.95rem;">
+                                <a href="mailto:hello@littleangels.com" style="color: var(--text-dark); text-decoration: none;">hello@littleangels.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <!-- Wavy Top Divider -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--buttercream)"></path>
+            </svg>
+        </div>
+        
+        <div class="footer-content" style="background: var(--primary-bg);">
+            <div class="container">
+                <div class="footer-top" style="text-align: center; margin-bottom: 50px; position: relative; z-index: 2;">
+                    <a href="index.html" class="nav-brand" style="justify-content: center; color: var(--text-dark);">
+                        <img src="LAK2logo.png" alt="Little Angels Icon" class="leaf-icon">
+                        <img src="LAKlogo.png" alt="Little Angels Kindergarten" class="brand-logo" style="margin-left: 12px;">
+                    </a>
+                    <p style="color: var(--text-body); opacity: 0.9; margin-top: 16px; max-width: 400px; margin-inline: auto;">Play, learn, and develop in our warm and magical scrapbook garden.</p>
+                </div>
+                <div class="footer-grid" style="color: var(--text-dark);">
+                    <div class="footer-col">
+                        <h4 style="color: var(--text-dark);">About Us</h4>
+                        <ul>
+                            <li><a href="about.html" style="color: var(--text-body);">Our Story</a></li>
+                            <li><a href="about.html#philosophy" style="color: var(--text-body);">Philosophy</a></li>
+                            <li><a href="about.html#team" style="color: var(--text-body);">Our Team</a></li>
+                            <li><a href="about.html#careers" style="color: var(--text-body);">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 style="color: var(--text-dark);">Programs</h4>
+                        <ul>
+                            <li><a href="programs.html#play-group" style="color: var(--text-body);">Play-Group</a></li>
+                            <li><a href="programs.html#nursery" style="color: var(--text-body);">Nursery</a></li>
+                            <li><a href="programs.html#juniorkg" style="color: var(--text-body);">Junior KG</a></li>
+                            <li><a href="programs.html#seniorkg" style="color: var(--text-body);">Senior KG</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 style="color: var(--text-dark);">Connect</h4>
+                        <ul>
+                            <li><a href="tel:+918275500910" style="color: var(--text-body);">+91 82755 00910</a></li>
+                            <li><a href="mailto:hello@littleangels.com" style="color: var(--text-body);">hello@littleangels.com</a></li>
+                            <li style="color: var(--text-body); font-size: 0.9rem; line-height: 1.4; margin-top: 8px;">Laxmi Nagar, Opp. Water Tank, Nagpur - 440 022</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 style="color: var(--text-dark);">Admissions</h4>
+                        <ul>
+                            <li><a href="admissions.html" style="color: var(--text-body);">Enrollment Process</a></li>
+                            <li><a href="admissions.html#fees" style="color: var(--text-body);">Tuition & Fees</a></li>
+                            <li><a href="admissions.html#requirements" style="color: var(--text-body);">Requirements</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom" style="border-top-color: rgba(0,0,0,0.1);">
+                    <div class="copyright" style="color: var(--text-body);">
+                        Copyright &copy; 2026 Little Angels Kindergarten | <a href="#" style="color: var(--text-body);">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Angels Kindergarten | Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="LAK2logo.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-grid {
+            column-count: 3;
+            column-gap: 30px;
+            padding-bottom: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 30px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-bg-doodle {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.12; /* Subtle opacity so it feels like background texture */
+            max-width: 150px;
+            height: auto !important;
+            object-fit: contain;
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .gallery-bg-doodle:hover {
+            transform: scale(1.15) rotate(8deg);
+        }
+
+        @media (max-width: 992px) {
+            .gallery-grid {
+                column-count: 2;
+            }
+            .gallery-bg-doodle {
+                max-width: 100px; /* scale down on smaller viewports */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid {
+                column-count: 1;
+            }
+            .gallery-bg-doodle {
+                max-width: 80px;
+                opacity: 0.08; /* even subtler on mobile to avoid clutter */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         NAVBAR
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <img src="LAK2logo.png" alt="Little Angels Icon" class="leaf-icon">
+                <img src="LAKlogo.png" alt="Little Angels Kindergarten" class="brand-logo">
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="contact.html" class="nav-cta">Visit Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO
+         ============================================ -->
+    <section class="hero" style="padding-bottom: 60px;">
+        <div class="container" style="display: block; text-align: center;">
+            <div class="hero-text reveal reveal-delay-1" style="max-width: 800px; margin: 0 auto; position: relative;">
+                <!-- Subtle PNG Doodles -->
+                <img src="doodles/12_20260517_151332_0011.png" alt="Doodle Leaf" class="scrapbook-doodle doodle-hero-1" loading="lazy">
+                <img src="doodles/17_20260517_151332_0016.png" alt="Doodle Flower" class="scrapbook-doodle doodle-hero-2" loading="lazy">
+                <span class="section-label" style="font-family: 'Kalam', cursive; font-size: 1.4rem; color: var(--sky-mist); margin-bottom: 8px;">Glimpses</span>
+                <h1 style="margin-bottom: 24px;">
+                    Our Colorful
+                    <span class="keyword highlight">
+                        World
+                        <svg class="scribble" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M 0 5 Q 25 -5, 50 5 T 100 5"/>
+                        </svg>
+                    </span>
+                </h1>
+                <p style="margin-inline: auto;">A peek into the daily adventures, crafts, and giggles of our little angels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         MASONRY GALLERY
+         ============================================ -->
+    <section class="gallery-section" style="padding-bottom: 100px;">
+        <!-- Background Doodles Scattered Organically -->
+        <img src="doodles/1_20260517_151332_0000.png" alt="Doodle Branch" class="gallery-bg-doodle" style="top: 4%; left: 2%; transform: rotate(15deg);" loading="lazy">
+        <img src="doodles/3_20260517_151332_0002.png" alt="Doodle Flower" class="gallery-bg-doodle" style="top: 10%; right: 3%; transform: rotate(-25deg);" loading="lazy">
+        <img src="doodles/4_20260517_151332_0003.png" alt="Doodle Leaf" class="gallery-bg-doodle" style="top: 16%; left: 88%; transform: rotate(35deg);" loading="lazy">
+        <img src="doodles/6_20260517_151332_0005.png" alt="Doodle Star" class="gallery-bg-doodle" style="top: 23%; left: 4%; transform: rotate(-15deg);" loading="lazy">
+        <img src="doodles/7_20260517_151332_0006.png" alt="Doodle Cloud" class="gallery-bg-doodle" style="top: 30%; right: 2%; transform: rotate(20deg);" loading="lazy">
+        <img src="doodles/8_20260517_151332_0007.png" alt="Doodle Scribble" class="gallery-bg-doodle" style="top: 38%; left: 3%; transform: rotate(-10deg);" loading="lazy">
+        <img src="doodles/9_20260517_151332_0008.png" alt="Doodle Flower" class="gallery-bg-doodle" style="top: 46%; right: 4%; transform: rotate(12deg);" loading="lazy">
+        <img src="doodles/10_20260517_151332_0009.png" alt="Doodle Shape" class="gallery-bg-doodle" style="top: 54%; left: 2%; transform: rotate(-30deg);" loading="lazy">
+        <img src="doodles/11_20260517_151332_0010.png" alt="Doodle Leaf" class="gallery-bg-doodle" style="top: 62%; right: 3%; transform: rotate(18deg);" loading="lazy">
+        <img src="doodles/13_20260517_151332_0012.png" alt="Doodle Shape" class="gallery-bg-doodle" style="top: 70%; left: 4%; transform: rotate(-8deg);" loading="lazy">
+        <img src="doodles/14_20260517_151332_0013.png" alt="Doodle Star" class="gallery-bg-doodle" style="top: 78%; right: 2%; transform: rotate(25deg);" loading="lazy">
+        <img src="doodles/15_20260517_151332_0014.png" alt="Doodle Branch" class="gallery-bg-doodle" style="top: 86%; left: 3%; transform: rotate(-20deg);" loading="lazy">
+        <img src="doodles/16_20260517_151332_0015.png" alt="Doodle Leaf" class="gallery-bg-doodle" style="top: 93%; right: 4%; transform: rotate(15deg);" loading="lazy">
+        <img src="doodles/18_20260517_151332_0017.png" alt="Doodle Flower" class="gallery-bg-doodle" style="top: 13%; left: 48%; transform: rotate(5deg); opacity: 0.06;" loading="lazy">
+        <img src="doodles/19_20260517_151332_0018.png" alt="Doodle Leaf" class="gallery-bg-doodle" style="top: 42%; left: 52%; transform: rotate(-12deg); opacity: 0.06;" loading="lazy">
+        <img src="doodles/20_20260517_151332_0019.png" alt="Doodle Shape" class="gallery-bg-doodle" style="top: 74%; left: 46%; transform: rotate(18deg); opacity: 0.06;" loading="lazy">
+        <div class="container">
+            
+            <!-- Category 1: Annual Day -->
+            <div class="section-header reveal" style="text-align: center; margin-bottom: 40px; margin-top: 20px;">
+                <span class="section-label" style="color: var(--coral); font-size: 1.2rem; display: block; margin-bottom: 8px;">✨ Event Celebrations</span>
+                <h2 style="font-size: 2.2rem; margin-bottom: 12px; color: var(--text-dark);">Annual Day Celebrations</h2>
+                <p style="max-width: 600px; margin: 0 auto; opacity: 0.85;">Dressed in colorful costumes, our little stars light up the stage with performance, music, and laughter.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Items 1 to 7 -->
+                <div class="gallery-item reveal">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--pink-mist); transform: rotate(-1deg);">
+                        <img src="imgs/sclimg1.jpeg" alt="Annual Day Image 1" loading="lazy">
+                    </div>
+                </div>
+                
+                <div class="gallery-item reveal reveal-delay-1">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--sky-mist); transform: rotate(2deg);">
+                        <img src="imgs/sclimg2.jpeg" alt="Annual Day Image 2" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-2">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--buttercream); transform: rotate(-3deg);">
+                        <img src="imgs/sclimg3.jpeg" alt="Annual Day Image 3" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-3">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--green-organic); transform: rotate(1deg);">
+                        <img src="imgs/sclimg4.jpeg" alt="Annual Day Image 4" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--coral); transform: rotate(-2deg);">
+                        <img src="imgs/sclimg5.jpeg" alt="Annual Day Image 5" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-1">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--lavender); transform: rotate(3deg);">
+                        <img src="imgs/sclimg6.jpeg" alt="Annual Day Image 6" loading="lazy">
+                    </div>
+                </div>
+                
+                <div class="gallery-item reveal reveal-delay-2">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--pink-mist); transform: rotate(-1.5deg);">
+                        <img src="imgs/sclimg7.jpeg" alt="Annual Day Image 7" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Pool Party -->
+            <div class="section-header reveal" style="text-align: center; margin-bottom: 40px; margin-top: 60px;">
+                <span class="section-label" style="color: var(--sky-mist); font-size: 1.2rem; display: block; margin-bottom: 8px;">💦 Splish Splash Fun</span>
+                <h2 style="font-size: 2.2rem; margin-bottom: 12px; color: var(--text-dark);">Pool Party Fun</h2>
+                <p style="max-width: 600px; margin: 0 auto; opacity: 0.85;">Beating the heat with splash games, pool activities, and cold treats under the warm sun.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Items 8 to 14 -->
+                <div class="gallery-item reveal reveal-delay-3">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--buttercream); transform: rotate(2.5deg);">
+                        <img src="imgs/sclimg8.jpeg" alt="Pool Party Image 1" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--sky-mist); transform: rotate(-2.5deg);">
+                        <img src="imgs/sclimg9.jpeg" alt="Pool Party Image 2" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-1">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--green-organic); transform: rotate(1.5deg);">
+                        <img src="imgs/sclimg10.jpeg" alt="Pool Party Image 3" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-2">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--coral); transform: rotate(-3.5deg);">
+                        <img src="imgs/sclimg11.jpeg" alt="Pool Party Image 4" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-3">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--lavender); transform: rotate(2deg);">
+                        <img src="imgs/sclimg12.jpeg" alt="Pool Party Image 5" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--pink-mist); transform: rotate(-2deg);">
+                        <img src="imgs/sclimg13.jpeg" alt="Pool Party Image 6" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-1">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--buttercream); transform: rotate(3.5deg);">
+                        <img src="imgs/sclimg14.jpeg" alt="Pool Party Image 7" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Classroom Fun & Creative Play -->
+            <div class="section-header reveal" style="text-align: center; margin-bottom: 40px; margin-top: 60px;">
+                <span class="section-label" style="color: var(--green-organic); font-size: 1.2rem; display: block; margin-bottom: 8px;">🎨 Art, Craft & Play</span>
+                <h2 style="font-size: 2.2rem; margin-bottom: 12px; color: var(--text-dark);">Classroom Fun & Creative Play</h2>
+                <p style="max-width: 600px; margin: 0 auto; opacity: 0.85;">Learning through exploration, painting, group activities, and building friendships in our bright rooms.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Items 15 to 21 -->
+                <div class="gallery-item reveal reveal-delay-2">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--sky-mist); transform: rotate(-1deg);">
+                        <img src="imgs/sclimg15.jpeg" alt="Classroom Image 1" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-3">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--green-organic); transform: rotate(2.5deg);">
+                        <img src="imgs/sclimg16.jpeg" alt="Classroom Image 2" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--coral); transform: rotate(-3deg);">
+                        <img src="imgs/sclimg17.jpeg" alt="Classroom Image 3" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-1">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--lavender); transform: rotate(1deg);">
+                        <img src="imgs/sclimg18.jpeg" alt="Classroom Image 4" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-2">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--pink-mist); transform: rotate(-2.5deg);">
+                        <img src="imgs/sclimg19.jpeg" alt="Classroom Image 5" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal reveal-delay-3">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--buttercream); transform: rotate(3deg);">
+                        <img src="imgs/sclimg20.jpeg" alt="Classroom Image 6" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <div class="sticker" style="border: 12px solid var(--white); border-bottom-width: 40px; border-color: var(--sky-mist); transform: rotate(-1.5deg);">
+                        <img src="imgs/sclimg21.jpeg" alt="Classroom Image 7" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <!-- Wavy Top Divider -->
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--buttercream)"></path>
+            </svg>
+        </div>
+        
+        <div class="footer-content" style="background: var(--primary-bg);">
+            <div class="container">
+                <div class="footer-top" style="text-align: center; margin-bottom: 50px; position: relative; z-index: 2;">
+                    <a href="index.html" class="nav-brand" style="justify-content: center; color: var(--text-dark);">
+                        <img src="LAK2logo.png" alt="Little Angels Icon" class="leaf-icon">
+                        <img src="LAKlogo.png" alt="Little Angels Kindergarten" class="brand-logo" style="margin-left: 12px;">
+                    </a>
+                    <p style="color: var(--text-body); opacity: 0.9; margin-top: 16px; max-width: 400px; margin-inline: auto;">Play, learn, and develop in our warm and magical scrapbook garden.</p>
+                </div>
+                <div class="footer-grid" style="color: var(--text-dark);">
+                    <div class="footer-col">
+                        <h4 style="color: var(--text-dark);">About Us</h4>
+                        <ul>
+                            <li><a href="about.html" style="color: var(--text-body);">Our Story</a></li>
+                            <li><a href="about.html#philosophy" style="color: var(--text-body);">Philosophy</a></li>
+                            <li><a href="about.html#team" style="color: var(--text-body);">Our Team</a></li>
+                            <li><a href="about.html#careers" style="color: var(--text-body);">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 style="color: var(--text-dark);">Programs</h4>
+                        <ul>
+                            <li><a href="programs.html#toddler" style="color: var(--text-body);">Toddler Program</a></li>
+                            <li><a href="programs.html#preschool" style="color: var(--text-body);">Preschool</a></li>
+                            <li><a href="programs.html#daycare" style="color: var(--text-body);">Day Care</a></li>
+                            <li><a href="programs.html#summer" style="color: var(--text-body);">Summer Camp</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 style="color: var(--text-dark);">Connect</h4>
+                        <ul>
+                            <li><a href="tel:+911234567890" style="color: var(--text-body);">+91 123 456 7890</a></li>
+                            <li><a href="mailto:hello@littleangels.com" style="color: var(--text-body);">hello@littleangels.com</a></li>
+                            <li><a href="index.html#faq" style="color: var(--text-body);">FAQ</a></li>
+                            <li><a href="contact.html" style="color: var(--text-body);">Visit Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4 style="color: var(--text-dark);">Admissions</h4>
+                        <ul>
+                            <li><a href="admissions.html" style="color: var(--text-body);">Enrollment Process</a></li>
+                            <li><a href="admissions.html#fees" style="color: var(--text-body);">Tuition & Fees</a></li>
+                            <li><a href="admissions.html#requirements" style="color: var(--text-body);">Requirements</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom" style="border-top-color: rgba(0,0,0,0.1);">
+                    <div class="copyright" style="color: var(--text-body);">
+                        Copyright &copy; 2026 Little Angels Kindergarten | <a href="#" style="color: var(--text-body);">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
