@@ -576,7 +576,12 @@ p {
     }
     
     .about-image-wrapper {
-        padding-bottom: 60px;
+        padding-bottom: 120px;
+    }
+
+    .about-main-img {
+        width: 100%;
+        transform: translateY(-30px);
     }
     
     .about-quote-card {
