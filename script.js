@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
+    /*
     // --- 5. Admission Enquiry Popup Logic ---
     const popupHtml = `
         <!-- Floating Trigger -->
@@ -214,5 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 4000);
     });
+    */
 
 });
